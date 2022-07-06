@@ -1,0 +1,70 @@
+.top{
+  display: flex;
+  justify-content: space-between;
+  background-color: #e4f1f4;
+}
+
+/*************
+紹介スペース
+*************/
+.left{
+  height: 100vh;
+  width: 50%;
+}
+
+.logo{
+  margin-top: 200px;
+  text-align: center;
+  padding: 50px 50px 0 50px;
+  font-size: 60px;
+  color: #11895c;
+  
+}
+
+.sub-logo{
+  text-align: center;
+  margin-bottom: 50px;
+  color: #6ccc90;
+  font-weight: bold;
+}
+
+.concept{
+  text-align: center;
+  color: #6ccc90;
+}
+
+.concept_under{
+  margin-top: 50px;
+  text-align: center;
+  color: #6ccc90;
+}
+
+
+/*************
+QRコードスペース
+*************/
+.right{
+  height: 100vh;
+  width: 50%;
+}
+
+.line-acount{
+  text-align: center;
+  margin-top: 200px;
+  font-size: 40px;
+  color: #548c5c;
+}
+
+.QRcode{
+  text-align: center;
+  padding: 40px;
+}
+
+.line-acount-sub{
+  text-align: center;
+  color: #548c5c;
+}
+.sign-in{
+  text-align: center;
+  color: #548c5c;
+}
