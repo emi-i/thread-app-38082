@@ -1,6 +1,6 @@
 class DiariesController < ApplicationController
   def index
-    @diaries = Diary.all
+    @diaries = Diary.where(release_id: 1)
   end
 
   def new
@@ -19,6 +19,6 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:title, :date, :content).merge(user_id: current_user.id)
+    params.require(:diary).permit(:title, :date, :content, :release_id).merge(user_id: current_user.id)
   end
 end
