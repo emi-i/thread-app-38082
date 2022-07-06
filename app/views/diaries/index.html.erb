@@ -2,5 +2,10 @@
 <div class="sign_in_top">
 
 <h1>日記ページ<h1>
-
+<% @diaries.each do |diary| %>
+<%= diary.title %>
+<%= diary.date %>
+<%= diary.content %>
+<%= diary.user.nickname %>
+<% end %>
 </div>
