@@ -1,0 +1,29 @@
+<div class="sign_in_top">
+<div class="user">
+  <div class="user_main">
+    <h2>投稿する</h2>
+    <%= form_with model:@diary, url: diaries_path, class: 'new_user',  local: true do |f| %>
+
+        <div class="field">
+          <%= f.label :title %><br />
+          <%= f.text_field :title %>
+        </div>
+
+        <div class="date">
+          <%= f.label :date %><br />
+          <%= f.date_field :date %>
+        </div>
+
+        <div class="area">
+          <%= f.label :content %><br />
+          <%= f.text_area :content %>
+        </div>
+        
+        <div class="actions">
+          <%= f.submit "POST" %>
+        </div>
+      <% end %>
+
+  </div>
+</div>
+</div>
