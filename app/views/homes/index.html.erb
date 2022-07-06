@@ -15,12 +15,12 @@
 
   <div class="line-acount-sub">QRコードを読み込み、友達登録をしてください</div>
   <div class="QRcode"><img src="https://qr-official.line.me/sid/M/259oxrtr.png?shortenUrl=true"></div>
- <%# <% if user_signed_in?%> 
-  <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> 
-<%# <% else %> 
-  <%# <%= link_to "新規登録", new_user_registration_path %> 
-  <%# <%= link_to "ログイン", new_user_session_path %> 
-<%# <% end %> 
+ <% if user_signed_in?%>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "新規登録", new_user_registration_path %>
+  <%= link_to "ログイン", new_user_session_path %>
+<% end %>
   </div>
 </div>
 
