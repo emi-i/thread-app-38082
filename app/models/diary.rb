@@ -1,4 +1,4 @@
 class Diary < ApplicationRecord
-  validates :title, :content, presence: true
+  validates :title, :content, :date, presence: true
   belongs_to :user
 end
