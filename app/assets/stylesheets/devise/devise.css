@@ -1,0 +1,62 @@
+.sign_up_top{
+  background-color: #e4f1f4;
+  width: 100%;
+}
+
+.create_top{
+  background-color: #e4f1f4;
+  width: 100%;
+  height: 100vh;
+}
+
+.sign_in_top{
+  background-color: #e4f1f4;
+  width: 100%;
+  height: 100vh;
+}
+
+.user{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+  padding: 25px 0 25px;
+}
+
+.user_main{
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgb(41 41 41 / 20%);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+h2{
+  margin: 20px 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.new_user{
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  width: 95%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.login-flash-message {
+  text-align: center;
+}
