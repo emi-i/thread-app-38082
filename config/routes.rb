@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  ddevise_for :users, controllers: {
+  devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
   devise_scope :user do
