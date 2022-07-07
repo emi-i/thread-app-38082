@@ -5,7 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :name, :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, on: :create
+
   has_one :address
   has_many :diaries
-  has_many :favorites, dependent: :favorites, source: :diary
+  has_many :favorites
+
+  def liked_by?(diary_id)
+    favorites.where(diary_id: diary_id).exists?
+  end
+  
 end
