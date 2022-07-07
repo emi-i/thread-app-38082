@@ -1,11 +1,30 @@
 <%= render partial: "header" %>
-<div class="sign_in_top">
 
-<h1>日記ページ<h1>
-<% @diaries.each do |diary| %>
-<%= diary.title %>
-<%= diary.date %>
-<%= diary.content %>
-<%= diary.user.nickname %>
-<% end %>
+<div class="index"></div>
+<div class="diary_index">
+  <div class="diary_main">
+
+    <% @diaries.each do |diary| %>
+    <div class="diary">
+
+      <div class="date_nickname">
+        <div class="date">
+          <%= diary.date %>
+        </div>
+        <div class="nickname">
+          <%= diary.user.nickname %>
+        </div>
+      </div>
+
+      <div class="title">
+        <%= diary.title %>
+      </div>
+
+      <div class="content">
+        <%= diary.content %>
+      </div>
+      
+    </div>
+    <% end %>
+  </div>
 </div>

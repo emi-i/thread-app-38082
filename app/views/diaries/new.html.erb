@@ -1,9 +1,9 @@
 <%= render partial: "header" %>
-<div class="sign_in_top">
-<div class="user">
-  <div class="user_main">
+<div class="diary_new_top">
+<div class="diary_main">
+  <div class="diary">
     <h2>投稿する</h2>
-    <%= form_with model:@diary, url: diaries_path, class: 'new_user',  local: true do |f| %>
+    <%= form_with model:@diary, url: diaries_path, class: 'new_daiary',  local: true do |f| %>
 
         <div class="field">
           <%= f.label :title %><br />
