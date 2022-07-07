@@ -27,7 +27,7 @@
           <div class="show_list">
             <div class="destroy_button">
                 <%= link_to "削除", "#", class: "show_button" %>
-                <%= link_to "編集", "#", class: "show_button" %>
+                <%= link_to "編集", edit_diary_path(@diary.id), class: "show_button" %>
             </div>
           </div>
         <% end %>
