@@ -1,0 +1,37 @@
+<%= render partial: "header" %>
+
+<div class="show">
+  <div class="diary_show">
+    <div class="diary_main">
+      <div class="show_list">
+
+        <div class="date_nickname">
+          <div class="date">
+            <%= @diary.date %>
+          </div>
+          <div class="nickname">
+            <%=  @diary.user.nickname %>
+          </div>
+        </div>
+
+        <div class="title">
+          <%= @diary.title %>
+        </div>
+
+        <div class="show_content">
+          <%= @diary.content %>
+        </div>
+      </div>
+
+        <% if @diary.user.id == current_user.id %>
+          <div class="show_list">
+            <div class="destroy_button">
+                <%= link_to "削除", "#", class: "show_button" %>
+                <%= link_to "編集", "#", class: "show_button" %>
+            </div>
+          </div>
+        <% end %>
+
+    </div>
+  </div>
+</div>
