@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   
   root to: 'homes#index'
 
-  resources :diaries do
-    resource :favorites, only: [:create, :destroy]
-  end
+  resources :diaries
 
   resources :users, only: :show
+
+  post 'favorite/:id', to: 'favorites#create', as: 'create_favorite'
 end

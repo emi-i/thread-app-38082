@@ -25,7 +25,7 @@
 
           <div class="show_list">
 
-        <% if current_user.liked_by?(@diary.id) %>
+        <% if current_user.favorited_by?(@diary.id) %>
           <td>いいねを外す</td>
         <% else %>
           <td>いいね</td>

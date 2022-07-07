@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :diaries
   has_many :favorites
 
-  def liked_by?(diary_id)
+  def favorited_by?(diary_id)
     favorites.where(diary_id: diary_id).exists?
   end
   
