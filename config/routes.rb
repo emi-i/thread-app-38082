@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   
   root to: 'homes#index'
 
-  resources :diaries
+  resources :diaries do
+    resource :favorites, only: [:create, :destroy]
+  end
+
   resources :users, only: :show
 end
