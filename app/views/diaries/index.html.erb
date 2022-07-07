@@ -2,7 +2,11 @@
 <div class="index">
   <div class="diary_index">
     <div class="diary_main">
-
+    <div class="logo">
+     <div class="diary_logo">Thread</div>
+     <div class="diary_sub_logo">見守りアプリ</div>
+    </div>
+     <div class="sub-logo">こんにちは、<%= current_user.nickname %>さん</div>
       <% @diaries.each do |diary| %>
       <div class="diary_list">
 
@@ -11,7 +15,7 @@
             <%= diary.date %>
           </div>
           <div class="nickname">
-            <%=  diary.user.nickname %>
+             <%= link_to diary.user.nickname, user_path(diary.user.id), class: "show_button" %>
           </div>
         </div>
 
