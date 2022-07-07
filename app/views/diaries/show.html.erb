@@ -23,7 +23,7 @@
         </div>
       </div>
 
-        <% if @diary.user.id == current_user.id %>
+        <% if @diary.user_id == current_user.id %>
           <div class="show_list">
             <div class="destroy_button">
                 <%= link_to "削除", "#", class: "show_button" %>
