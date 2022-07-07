@@ -66,3 +66,5 @@ end
 gem 'line-bot-api'
 
 gem 'active_hash'
+
+gem 'rails-i18n'

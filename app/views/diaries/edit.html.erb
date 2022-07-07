@@ -6,6 +6,8 @@
     <h2>投稿する</h2>
     <%= form_with model:@diary, url: diary_path, class: 'new_daiary',  local: true do |f| %>
 
+    <%= render 'error_messages', model: f.object %>
+
         <div class="field">
           <%= f.label :title %><br />
           <%= f.text_field :title %>

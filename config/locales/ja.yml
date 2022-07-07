@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        name: 名前
+      address:
+        post_code: 郵便番号
+        address: 住所
+        tel: 電話番号
+        emergency_contact_tel: 緊急連絡先
+        emergency_contact_name: 緊急連絡先のお名前
+
