@@ -1,0 +1,57 @@
+<%= render partial: "diaries/header" %>
+<div class="index">
+  <div class="diary_index">
+    <div class="diary_main">
+    <div class="sub-logo"><%= @user.nickname %> さんのマイページ</div>
+    
+    <% if @user.id != current_user.id %>
+      <% @user.diaries.each do |diary| %>
+        <% if  diary.release.name == "公開" %>
+        <div class="diary_list">
+          <div class="date_nickname">
+            <div class="date">
+              <%= diary.date %>
+            </div>
+            <div class="nickname">
+              <%=  diary.user.nickname %>
+            </div>
+          </div>
+
+          <div class="title">
+            <%= link_to diary.title, diary_path(diary.id), class: "show_button" %>
+          </div>
+
+          <div class="content">
+            <%= diary.content %>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <% if @user.id == current_user.id %>
+      <% @user.diaries.each do |diary| %>
+      <div class="diary_list">
+        <div class="date_nickname">
+          <div class="date">
+            <%= diary.date %>
+          </div>
+          <div class="nickname">
+            <%=  diary.user.nickname %>
+          </div>
+        </div>
+
+        <div class="title">
+          <%= link_to diary.title, diary_path(diary.id), class: "show_button" %>
+        </div>
+
+        <div class="content">
+          <%= diary.content %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @diaries = Diary.where(release_id: 1)
   end

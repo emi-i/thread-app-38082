@@ -1,6 +1,20 @@
 
 /* indexページ */
 
+
+.diary_logo{
+  text-align: center;
+  font-size: 60px;
+  color: #11895c;
+}
+
+.diary_sub_logo{
+  text-align: center;
+  color: #6ccc90;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
 .index{
   height: 100vh;
 }
@@ -38,6 +52,7 @@
   margin-bottom: 5px;
   font-size: 18px;
   color:#696969;
+  font-family: "游ゴシック", "YuGothic";
 }
 
 .show_button{
@@ -45,7 +60,6 @@
   font-weight: 400;
   font-family: "游ゴシック", "YuGothic";
   color:#696969;
-  margin-left: 20px;
 }
 
 .date{
@@ -118,8 +132,21 @@
 
 }
 
-.destroy_button{
+.destroy_edit_button{
   display: flex;
   justify-content: right;
-  
+}
+.destroy_button{
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "游ゴシック", "YuGothic";
+  color:#696969;
+  margin-left: 20px;
+}
+.edit_button{
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "游ゴシック", "YuGothic";
+  color:#696969;
+  margin-left: 20px;
 }

@@ -25,9 +25,9 @@
 
         <% if @diary.user_id == current_user.id %>
           <div class="show_list">
-            <div class="destroy_button">
-                <%= link_to "削除", diary_path, method: :delete, class: "show_button" %>
-                <%= link_to "編集", edit_diary_path(@diary.id), class: "show_button" %>
+            <div class="destroy_edit_button">
+                <%= link_to "削除", diary_path, method: :delete, class: "destroy_button" %>
+                <%= link_to "編集", edit_diary_path(@diary.id), class: "edit_button" %>
             </div>
           </div>
         <% end %>
