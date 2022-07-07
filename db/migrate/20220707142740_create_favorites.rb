@@ -5,7 +5,6 @@ class CreateFavorites < ActiveRecord::Migration[6.0]
       t.references    :diary,   null: false, foreign_key: true
 
       t.timestamps
-      t.index [:user_id, :diary_id], unique: true
     end
   end
 end
