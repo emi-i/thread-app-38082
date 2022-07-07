@@ -12,12 +12,12 @@
           <%= diary.date %>
         </div>
         <div class="nickname">
-          <%= diary.user.nickname %>
+          <%=  diary.user.nickname %>
         </div>
       </div>
 
       <div class="title">
-        <%= diary.title %>
+        <%= link_to diary.title, diary_path(diary.id), class: "show_button" %>
       </div>
 
       <div class="content">

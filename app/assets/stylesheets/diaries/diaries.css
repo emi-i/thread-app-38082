@@ -32,10 +32,18 @@
 .title{
   border-bottom: 2px solid #e4f1f4;
   margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.show_button{
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "游ゴシック", "YuGothic";
+  color:#696969;
 }
 
 .date{
-  
+  font-size: 13px;
 }
 
 .content{
@@ -48,6 +56,8 @@
 .nickname{
 
 }
+
+
 
 /* newページ */
 
