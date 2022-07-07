@@ -1,0 +1,23 @@
+.header{
+  height: 60px;
+  width: 100%;
+  background-color: #cce7f0;
+}
+
+.button_area{
+  margin: 0 10% 0 10%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  text-decoration: none;
+  padding: 5px;
+  color: #11895c;
+  font-weight: 400;
+  border-bottom: 1px solid #11895c;
+  font-family: "游ゴシック", "YuGothic";
+}
+

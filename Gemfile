@@ -64,3 +64,5 @@ group :development do
 end
 
 gem 'line-bot-api'
+
+gem 'active_hash'

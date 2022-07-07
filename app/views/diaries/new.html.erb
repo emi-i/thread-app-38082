@@ -1,0 +1,34 @@
+<%= render partial: "header" %>
+<div class="diary_new_top">
+<div class="diary_main">
+  <div class="diary">
+    <h2>投稿する</h2>
+    <%= form_with model:@diary, url: diaries_path, class: 'new_daiary',  local: true do |f| %>
+
+        <div class="field">
+          <%= f.label :title %><br />
+          <%= f.text_field :title %>
+        </div>
+
+        <div class="date">
+          <%= f.label :date %><br />
+          <%= f.date_field :date %>
+        </div>
+
+        <div class="area">
+          <%= f.label :content %><br />
+          <%= f.text_area :content %>
+        </div>
+
+        <div class="field">
+        <%= f.label :release %><br />
+        <%= f.collection_select(:release_id, Release.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div><br>
+
+        <div class="actions">
+          <%= f.submit "POST" %>
+        </div>
+      <% end %>
+  </div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+form textarea {
+  height: 200px;
+  width: 95%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+form input {
+  width: 95%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.login-flash-message {
+  text-align: center;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+}
