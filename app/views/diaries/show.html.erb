@@ -28,7 +28,7 @@
         <% if current_user.favorited_by?(@diary.id) %>
           <td>いいねを外す</td>
         <% else %>
-          <td>いいね</td>
+          <td><%= link_to 'いいね', create_favorite_path(diary), method: :POST %></td>
         <% end %>
 
         <% if @diary.user_id == current_user.id %>
