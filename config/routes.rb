@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   
   root to: 'homes#index'
 
-  resources :diaries, only: [:index, :new, :create, :show, :edit, :update]
+  resources :diaries
 end
