@@ -30,7 +30,7 @@ RSpec.describe Diary, type: :model do
       it 'userが紐づいてないと登録できない' do
         @diary.user = nil
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("User must exist")
+        expect(@diary.errors.full_messages).to include('User must exist')
       end
     end
   end
