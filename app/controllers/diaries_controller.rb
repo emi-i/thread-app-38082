@@ -18,16 +18,12 @@ class DiariesController < ApplicationController
 
   def show
     @diary = Diary.find(params[:id])
-    if @diary.release_id == 2 && @diary.user_id != current_user.id
-      redirect_to diaries_path
-    end
+    redirect_to diaries_path if @diary.release_id == 2 && @diary.user_id != current_user.id
   end
 
   def edit
     @diary = Diary.find(params[:id])
-    if @diary.release_id == 2 && @diary.user_id != current_user.id
-      redirect_to diaries_path
-    end
+    redirect_to diaries_path if @diary.release_id == 2 && @diary.user_id != current_user.id
   end
 
   def update
