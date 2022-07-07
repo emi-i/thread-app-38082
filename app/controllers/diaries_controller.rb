@@ -37,7 +37,7 @@ class DiariesController < ApplicationController
 
   def destroy
     @diary = Diary.find(params[:id])
-    @item.destroy if current_user.id == @diary.user.id
+    @diary.destroy if current_user.id == @diary.user.id
     redirect_to diaries_path
   end
 
