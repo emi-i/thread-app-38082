@@ -23,14 +23,19 @@
         </div>
       </div>
 
-        <% if @diary.user_id == current_user.id %>
           <div class="show_list">
+          
+          <div id="diary_<%= @diary.id %>">
+          <%= render partial:'favorite', locals: {diary: @diary} %>
+          </div>
+
+        <% if @diary.user_id == current_user.id %>
             <div class="destroy_edit_button">
                 <%= link_to "削除", diary_path, method: :delete, class: "destroy_button" %>
                 <%= link_to "編集", edit_diary_path(@diary.id), class: "edit_button" %>
             </div>
-          </div>
         <% end %>
+          </div>
 
     </div>
   </div>
