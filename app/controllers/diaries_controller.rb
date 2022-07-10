@@ -2,6 +2,7 @@ class DiariesController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    # 公開だけ表示
     @diaries = Diary.where(release_id: 1)
   end
 

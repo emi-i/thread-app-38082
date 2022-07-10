@@ -24,8 +24,10 @@
       </div>
 
           <div class="show_list">
-
+          
+          <div id="diary_<%= @diary.id %>">
           <%= render partial:'favorite', locals: {diary: @diary} %>
+          </div>
 
         <% if @diary.user_id == current_user.id %>
             <div class="destroy_edit_button">
