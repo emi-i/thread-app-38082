@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   has_one :address
   has_many :diaries
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
 
   def favorited_by?(diary_id)
     favorites.where(diary_id: diary_id).exists?
