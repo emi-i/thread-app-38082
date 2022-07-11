@@ -26,7 +26,7 @@ class DiariesController < ApplicationController
 
   def edit
     @diary = Diary.find(params[:id])
-    redirect_to diaries_path if @diary.release_id == 2 && @diary.user_id != current_user.id
+    redirect_to diaries_path unless current_user.id == @diary.user.id
   end
 
   def update
