@@ -1,5 +1,5 @@
       <% if current_user.favorited_by?(diary.id) %>
-        <td><%= link_to 'いいねを外す', destroy_favorite_path(diary.id), method: :DELETE, remote: true%> <%= diary.favorites.count %></td>
+        <td><%= link_to '❤️', destroy_favorite_path(diary.id), method: :DELETE, remote: true, class: "favorite" %> <%= diary.favorites.count %></td>
       <% else %>
-        <td><%= link_to 'いいね', create_favorite_path(diary.id), method: :POST, remote: true %> <%= diary.favorites.count %></td>
+        <td><%= link_to '🤍', create_favorite_path(diary.id), method: :POST, remote: true, class: "favorite" %> <%= diary.favorites.count %></td>
       <% end %>
