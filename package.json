@@ -1,5 +1,6 @@
 {
   "name": "thread_app_38082",
+  "license": "UNLICENSED",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
