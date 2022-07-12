@@ -13,5 +13,4 @@ class User < ApplicationRecord
   def favorited_by?(diary_id)
     favorites.where(diary_id: diary_id).exists?
   end
-  
 end

@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :favorite do
+  factory :lineuser do
   end
 end

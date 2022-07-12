@@ -12,12 +12,20 @@ class LineBotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          message = {
-            type: 'flex',
-            altText: '初めまして',
-            contents: account_create_message(event)
-          }
-          client.reply_message(event['replyToken'], message)
+          if event.message['text'].include?('OK')
+            message = {
+              type: 'text',
+              text: '確認いたしました'
+            }
+            client.reply_message(event['replyToken'], message)
+          else
+            message = {
+              type: 'flex',
+              altText: 'こんにちは',
+              contents: diary_message
+            }
+            client.reply_message(event['replyToken'], message)
+          end
         end
       end
       case event
@@ -28,6 +36,15 @@ class LineBotController < ApplicationController
           contents: account_create_message(event)
         }
         client.reply_message(event['replyToken'], message)
+
+        userId = event['source']['userId']
+        Lineuser.find_or_create_by(uid: userId)
+      end
+      case event
+      when Line::Bot::Event::Unfollow
+        userId = event['source']['userId']
+        user = Lineuser.find_by(uid: userId)
+        user.destroy if user.present?
       end
     end
     head :ok
@@ -60,6 +77,31 @@ class LineBotController < ApplicationController
               type: 'uri',
               label: 'こちらです',
               uri: 'https://thread-app-38082.herokuapp.com/users/sign_up?linkToken=' + event['replyToken']
+            }
+          }
+        ]
+      }
+    }
+  end
+
+  def diary_message
+    {
+      type: 'bubble',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'text',
+            text: 'メッセージありがとうございます。よければ今日の日記を投稿してください☺️',
+            wrap: true
+          },
+          {
+            type: 'button',
+            action: {
+              type: 'uri',
+              label: 'こちらです',
+              uri: 'https://thread-app-38082.herokuapp.com/diaries'
             }
           }
         ]
