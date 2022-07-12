@@ -1,5 +1,5 @@
-namespace :task_sample do
-  desc "LINE"
+namespace :scheduler do
+  desc "This task is called by the Heroku scheduler add-on"
   task push_line_message: :environment do
     message = {
       type: 'flex',
@@ -42,4 +42,5 @@ namespace :task_sample do
       }
     }
   end
+
 end
