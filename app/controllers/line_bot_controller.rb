@@ -12,9 +12,9 @@ class LineBotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          if event.message["text"].include?("OK")
+          if event.message['text'].include?('OK')
             message = {
-              type:'text',
+              type: 'text',
               text: '確認いたしました'
             }
             client.reply_message(event['replyToken'], message)
@@ -37,12 +37,12 @@ class LineBotController < ApplicationController
         }
         client.reply_message(event['replyToken'], message)
 
-        userId = event['source']['userId'] 
+        userId = event['source']['userId']
         Lineuser.find_or_create_by(uid: userId)
       end
       case event
       when Line::Bot::Event::Unfollow
-        userId = event['source']['userId']  
+        userId = event['source']['userId']
         user = Lineuser.find_by(uid: userId)
         user.destroy if user.present?
       end
@@ -83,7 +83,7 @@ class LineBotController < ApplicationController
       }
     }
   end
-  
+
   def diary_message
     {
       type: 'bubble',
