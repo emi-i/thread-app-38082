@@ -28,6 +28,15 @@ class LineBotController < ApplicationController
           contents: account_create_message(event)
         }
         client.reply_message(event['replyToken'], message)
+
+        userId = event['source']['userId'] 
+        Lineuser.find_or_create_by(uid: userId)
+      end
+      case event
+      when Line::Bot::Event::Unfollow
+        userId = event['source']['userId']  
+        user = Lineuser.find_by(uid: userId)
+        user.destroy if user.present?
       end
     end
     head :ok
