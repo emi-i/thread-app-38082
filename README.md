@@ -55,9 +55,9 @@ LINEでフレンド登録をすると通知が届きます
 
 メッセージを送ると応答メッセージが返されるようになっています。  
 <br>
-[![Image from Gyazo](https://i.gyazo.com/58b8987c31c366062ff14e9e7ed5da1d.png)](https://gyazo.com/58b8987c31c366062ff14e9e7ed5da1d)
+[![Image from Gyazo](https://i.gyazo.com/da3090a52307b20db179dc4da273e99a.png)](https://gyazo.com/da3090a52307b20db179dc4da273e99a)
 
-毎日このような通知が届き、actionボタンを押すとOKとメッセージが送信され応答メッセージが届きます。  
+毎日このような通知が届き、OKボタンを押すとOKとメッセージが送信され応答メッセージが届きます。  
 <br>
 
 
