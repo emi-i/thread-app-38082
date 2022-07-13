@@ -19,7 +19,7 @@
         </div>
 
         <div class="show_content">
-          <%= @diary.content %>
+          <%= safe_join(@diary.content.split("\n"),tag(:br)) %>
         </div>
       </div>
 
