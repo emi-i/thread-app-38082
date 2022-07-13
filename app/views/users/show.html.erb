@@ -6,7 +6,7 @@
     
     <%# 非公開を表示させない %>
     <% if @user.id != current_user.id %>
-      <% @user.diaries.each do |diary| %>
+      <% @diaries.each do |diary| %>
         <% if  diary.release.name == "公開" %>
         <div class="diary_list">
           <div class="date_nickname">
@@ -32,7 +32,7 @@
 
   <%# 非公開を表示させる %>
     <% if @user.id == current_user.id %>
-      <% @user.diaries.each do |diary| %>
+      <% @diaries.each do |diary| %>
       <div class="diary_list">
         <div class="date_nickname">
           <div class="date">
