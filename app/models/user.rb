@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:line]
+         :omniauthable, omniauth_providers: %i[line]
   validates :name, :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, on: :create
 
@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :diaries
   has_many :favorites, dependent: :destroy
   has_many :sns_credentials
+
+  def self.from_omniauth(auth)
+  end
 
   def favorited_by?(diary_id)
     favorites.where(diary_id: diary_id).exists?
