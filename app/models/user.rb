@@ -13,6 +13,14 @@ class User < ApplicationRecord
   has_many :sns_credentials
 
   def self.from_omniauth(auth)
+    sns = SnsCredential.first_or_create(provider: auth.provider, uid: auth.uid)
+    user = User.first_or_initialize(nickname: auth.info.name) 
+
+    if user.persisted?
+      sns.user = user
+      sns.save
+    end
+    user
   end
 
   def favorited_by?(diary_id)
