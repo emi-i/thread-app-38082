@@ -12,7 +12,7 @@ namespace :scheduler do
       config.channel_token = ENV['LINE_CHANNEL_TOKEN']
     end
 
-    Lineuser.all.each do |user|
+    SnsCredential.all.each do |user|
       response = client.push_message(user.uid, message)
     end
   end
