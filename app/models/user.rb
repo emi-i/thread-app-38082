@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name, :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, on: :create
 
-  has_one :address
+  has_one :address, dependent: :destroy
   has_many :diaries, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :sns_credentials, dependent: :destroy

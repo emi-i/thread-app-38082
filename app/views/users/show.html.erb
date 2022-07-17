@@ -3,7 +3,9 @@
   <div class="diary_index">
     <div class="diary_main">
     <div class="sub-logo"><%= @user.nickname %> さんのマイページ</div>
-    
+    <div class="line-button-area">
+    <%= link_to '退会', user_registration_path, method: :delete, data: { confirm: "アカウントを削除してもよろしいですか？" }, class:"line-button" %>
+    </div>
     <%# 非公開を表示させない %>
     <% if @user.id != current_user.id %>
       <% @diaries.each do |diary| %>
