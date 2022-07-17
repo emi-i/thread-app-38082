@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
   
   root to: 'homes#index'
+  get 'finish', to: 'homes#finish'
 
   resources :diaries
 

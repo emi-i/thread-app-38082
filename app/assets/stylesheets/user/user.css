@@ -48,9 +48,14 @@ h2{
   text-align: center;
 }
 
+.line-button-area{
+  text-align: center;
+  margin-top: 30px;
+}
+
 .line-button {
   text-decoration: none;
-  padding-top: 30px;
+  margin-top: 30px;
   color: #11895c;
   font-weight: 400;
   border-bottom: 1px solid #11895c;

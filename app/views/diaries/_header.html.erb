@@ -7,7 +7,7 @@
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button" %>
 
     <% else %>
-    <%= link_to "ログイン", user_line_omniauth_authorize_path, method: :post, class: "button"%>
+    <%= link_to "ログイン", new_user_session_path, class: "button"%>
     <%= link_to "新規登録", user_line_omniauth_authorize_path, method: :post, class: "button"%>
     <% end %>
 
