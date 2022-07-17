@@ -8,9 +8,9 @@ class User < ApplicationRecord
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, on: :create
 
   has_one :address
-  has_many :diaries
+  has_many :diaries, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  has_many :sns_credentials
+  has_many :sns_credentials, dependent: :destroy
 
   def self.from_omniauth(auth)
     sns = SnsCredential.first_or_create(provider: auth.provider, uid: auth.uid)
