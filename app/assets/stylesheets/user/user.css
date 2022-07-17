@@ -44,6 +44,16 @@ h2{
   font-family: "游ゴシック", "YuGothic";
 }
 
+.QRcode{
+  text-align: center;
+}
 
-
+.line-button {
+  text-decoration: none;
+  padding-top: 30px;
+  color: #11895c;
+  font-weight: 400;
+  border-bottom: 1px solid #11895c;
+  font-family: "游ゴシック", "YuGothic";
+}
 

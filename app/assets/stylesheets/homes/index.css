@@ -1,21 +1,29 @@
-.top{
-  display: flex;
-  justify-content: space-between;
+.home_top{
   background-color: #e4f1f4;
+  width: 100%;
+  height: 100%;
 }
 
-/*************
-紹介スペース
-*************/
-.left{
-  height: 100vh;
-  width: 50%;
+.home{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+  padding: 25px 0 25px;
+}
+
+.home_main{
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px #696969;
+  background-color: white;
+  box-sizing: border-box;
 }
 
 .homes_logo{
-  margin-top: 200px;
   text-align: center;
-  padding: 50px 50px 0 50px;
   font-size: 60px;
   color: #11895c;
   
@@ -39,32 +47,14 @@
   color: #6ccc90;
 }
 
-
-/*************
-QRコードスペース
-*************/
-.right{
-  height: 100vh;
-  width: 50%;
-}
-
 .line-acount{
   text-align: center;
-  margin-top: 200px;
-  font-size: 40px;
+  font-size: 30px;
   color: #548c5c;
 }
 
-.QRcode{
-  text-align: center;
-  padding: 40px;
-}
-
-.line-acount-sub{
-  text-align: center;
-  color: #548c5c;
-}
-.sign-in{
-  text-align: center;
-  color: #548c5c;
+.content{
+  padding-left: 50px;
+  padding-top: 10px;
+  color: #6ccc90;
 }

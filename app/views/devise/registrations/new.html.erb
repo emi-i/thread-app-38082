@@ -36,13 +36,7 @@
             <%= f.submit "Next" %>
           </div>
         <% end %>
-            <div class="line-acount-sub">本サービスでは、ログインの際の認証画面にて許可をいただいた場合のみ、
-            LINEアカウントに登録されているメールアドレスを所得します。
-            取得したメールアドレスは、ユーザーIDとして開かんとの管理に利用させていただきます。
-            また、法令に定められた場合を除き、第三者への提供はいたしません。</div>
-            <br>
-            <%= link_to "LINEで登録", user_line_omniauth_authorize_path, method: :post, class: "button"%>
-            <%= link_to "登録している方はこちら",new_user_session_path , class: "button" %>
+            <%= link_to "登録している方はこちら", user_line_omniauth_authorize_path, method: :post, class: "button"%>
     </div>
     </div>
   </div>

@@ -44,12 +44,6 @@ ActiveRecord::Schema.define(version: 2022_07_14_083845) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
-  create_table "lineusers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "uid"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
