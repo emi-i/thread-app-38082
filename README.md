@@ -46,12 +46,12 @@ https://thread-app-38082.herokuapp.com/
 
 
 # 実装した機能についての画像やGIFおよびその説明
-[![Image from Gyazo](https://i.gyazo.com/a0f5a88128e2aa626cb97ba91f0c0739.png)](https://gyazo.com/a0f5a88128e2aa626cb97ba91f0c0739)
+[![Image from Gyazo](https://i.gyazo.com/ec34b647a9df7c19546f5d584934a6c4.png)](https://gyazo.com/ec34b647a9df7c19546f5d584934a6c4)
 
 LINEでフレンド登録をすると通知が届きます  
-「こちらです」のボタンを押すと新規登録ページに遷移します。  
+「こちらです」のボタンを押すとユーザー登完了ページに遷移します。  
 
-[![Image from Gyazo](https://i.gyazo.com/0cb9addee459cfd1223c0310c5a14003.png)](https://gyazo.com/0cb9addee459cfd1223c0310c5a14003)
+[![Image from Gyazo](https://i.gyazo.com/338a95fa0ca048635af3a8a861475dc7.png)](https://gyazo.com/338a95fa0ca048635af3a8a861475dc7)
 
 メッセージを送ると応答メッセージが返されるようになっています。  
 <br>
@@ -70,7 +70,7 @@ LINEメッセージに一定期間応答がないことを開発者が把握で�
 
 # データベース設計
 
-[![Image from Gyazo](https://i.gyazo.com/2295aef5b62ac9c45ea445b2f4bcbd08.png)](https://gyazo.com/2295aef5b62ac9c45ea445b2f4bcbd08)  
+[![Image from Gyazo](https://i.gyazo.com/cc42274347ec98d218465ce57117a871.png)](https://gyazo.com/cc42274347ec98d218465ce57117a871)
 
 
 
@@ -89,10 +89,9 @@ LINEメッセージに一定期間応答がないことを開発者が把握で�
 ### LINE messaging API
 ***
 （概要（現段階））  
-- 公式アカウントをフレンド登録すると、サーバーにLINEのユーザーIDが保存されます。アプリにはサイトの新規登録画面に遷移するURLを含んだメッセージが届きます
+- LINEログイン機能を実装しており、新規登録することでLINE IDとユーザーIDが連携します。
 - メッセージを送ると応答メッセージが届きます
-- 毎日18時になるとメッセージが届き、OKボタンを押すと自動でOKとメッセージが送信され、「確認いたしました」と応答メッセージが返ってきます
-- 公式アカウントをブロックまたは削除するとサーバーのID情報も消滅し、メッセージは届かなくなります  
+- 毎日18時になるとメッセージが届き、OKボタンを押すと自動でOKとメッセージが送信され、「確認いたしました」と応答メッセージが返ってきます  
 <br>
 
 （導入した背景）   
