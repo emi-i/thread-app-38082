@@ -50,7 +50,7 @@ class LineBotController < ApplicationController
     end
   end
 
-  def account_create_message(event)
+  def account_create_message(_event)
     {
       type: 'bubble',
       body: {

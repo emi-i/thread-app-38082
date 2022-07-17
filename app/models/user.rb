@@ -14,7 +14,7 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     sns = SnsCredential.first_or_create(provider: auth.provider, uid: auth.uid)
-    user = User.first_or_initialize(nickname: auth.info.name) 
+    user = User.first_or_initialize(nickname: auth.info.name)
 
     if user.persisted?
       sns.user = user
