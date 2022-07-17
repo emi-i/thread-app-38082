@@ -71,3 +71,6 @@ gem 'rails-i18n'
 
 gem 'jquery-rails'
 
+gem 'omniauth-line'
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth', '~>1.9.1'

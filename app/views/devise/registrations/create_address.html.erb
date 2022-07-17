@@ -2,7 +2,12 @@
   <div class="user">
     <div class="user_main">
         <h2>登録が完了しました</h2>
-        <%= link_to "トップへ戻る", diaries_path%>
+        <div class="line-acount">公式LINEアカウント</div>
+        <div class="sub-logo">フレンド登録をして下さい</div>
+        <div class="QRcode"><img src="https://qr-official.line.me/sid/M/259oxrtr.png?shortenUrl=true"></div>
+        <div class="line-button-area">
+        <%= link_to "フレンド登録した方はこちらでログインしてください", user_line_omniauth_authorize_path, method: :post, class: "line-button"%>
+        </div>
     </div>
   </div>
 </div>

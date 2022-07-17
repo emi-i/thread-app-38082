@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :lineuser do
+  factory :sns_credential do
   end
 end

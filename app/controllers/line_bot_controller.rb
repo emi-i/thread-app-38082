@@ -36,15 +36,6 @@ class LineBotController < ApplicationController
           contents: account_create_message(event)
         }
         client.reply_message(event['replyToken'], message)
-
-        userId = event['source']['userId']
-        Lineuser.find_or_create_by(uid: userId)
-      end
-      case event
-      when Line::Bot::Event::Unfollow
-        userId = event['source']['userId']
-        user = Lineuser.find_by(uid: userId)
-        user.destroy if user.present?
       end
     end
     head :ok
@@ -59,7 +50,7 @@ class LineBotController < ApplicationController
     end
   end
 
-  def account_create_message(event)
+  def account_create_message(_event)
     {
       type: 'bubble',
       body: {
@@ -68,7 +59,7 @@ class LineBotController < ApplicationController
         contents: [
           {
             type: 'text',
-            text: '下記のURLをクリックしてユーザー登録をしてください😀',
+            text: 'フレンド登録ありがとうございます😊下記のボタンをクリックしてユーザー登録を完了してください😀',
             wrap: true
           },
           {
@@ -76,7 +67,7 @@ class LineBotController < ApplicationController
             action: {
               type: 'uri',
               label: 'こちらです',
-              uri: 'https://thread-app-38082.herokuapp.com/users/sign_up?linkToken=' + event['replyToken']
+              uri: 'https://thread-app-38082.herokuapp.com/finish'
             }
           }
         ]
