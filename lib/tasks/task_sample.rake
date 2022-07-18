@@ -3,7 +3,7 @@ namespace :task_sample do
   task push_line_message: :environment do
     message = {
       type: 'flex',
-      altText: '初めまして',
+      altText: 'こんにちは',
       contents: how_message
     }
 
