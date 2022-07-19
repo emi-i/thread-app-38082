@@ -1,6 +1,6 @@
 class LineBotController < ApplicationController
   protect_from_forgery except: [:callback]
-  require "date"
+  require 'date'
 
   def callback
     body = request.body.read
@@ -20,10 +20,10 @@ class LineBotController < ApplicationController
             }
             client.reply_message(event['replyToken'], message)
 
-            userId = event['source']['userId'] 
+            userId = event['source']['userId']
             date = Date.today
             t = DateTime.now
-            time = t.strftime("%Y-%m-%d %H:%M:%S")
+            time = t.strftime('%Y-%m-%d %H:%M:%S')
             user = SnsCredential.find_by(uid: userId)
             user.safe_date = date
             user.safe_time = time

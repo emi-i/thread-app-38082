@@ -45,7 +45,7 @@ namespace :scheduler do
 
   desc 'This task is called by the Heroku scheduler add-on'
   task safety_confirmation: :environment do
-    require "date"
+    require 'date'
 
     EmergencyList.destroy_all
 
@@ -56,9 +56,7 @@ namespace :scheduler do
 
     users.each do |user|
       today = Date.today
-      if user.safe_date == Date.today - 2
-        emergencies << user
-      end
+      emergencies << user if user.safe_date == Date.today - 2
     end
 
     emergencies.each do |emergency|
@@ -72,12 +70,11 @@ namespace :scheduler do
     end
 
     emergency_list.each do |emergency|
-    user = EmergencyList.new 
-    user.name = emergency[:name]
-    user.tel = emergency[:tel]
-    user.emergency_tel = emergency[:emergency_tel]
-    user.save
+      user = EmergencyList.new
+      user.name = emergency[:name]
+      user.tel = emergency[:tel]
+      user.emergency_tel = emergency[:emergency_tel]
+      user.save
     end
-
   end
 end
