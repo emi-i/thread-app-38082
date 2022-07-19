@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 2022_07_14_083845) do
     t.string "provider"
     t.string "uid"
     t.bigint "user_id"
+    t.date "safe_date"
+    t.string "safe_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_sns_credentials_on_user_id"
