@@ -1,0 +1,2 @@
+class EmergencyList < ApplicationRecord
+end
