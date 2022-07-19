@@ -46,19 +46,22 @@ namespace :scheduler do
   desc 'This task is called by the Heroku scheduler add-on'
   task safety_confirmation: :environment do
     require 'date'
-
+    # 前日のEmergencyList削除
     EmergencyList.destroy_all
+
 
     users = SnsCredential.all.includes(:user)
     emergencies = []
     emergencies_contact = {}
     emergency_list = []
 
+    # 二日以上連絡のないuser
     users.each do |user|
       today = Date.today
       emergencies << user if user.safe_date == Date.today - 2
     end
 
+    # 二日以上連絡のないuserの情報
     emergencies.each do |emergency|
       name = emergency.user.name
       tel = emergency.user.address.tel
@@ -69,6 +72,7 @@ namespace :scheduler do
       emergency_list << emergencies_contact
     end
 
+    # EmergencyListに追加
     emergency_list.each do |emergency|
       user = EmergencyList.new
       user.name = emergency[:name]
