@@ -20,11 +20,13 @@ class LineBotController < ApplicationController
             }
             client.reply_message(event['replyToken'], message)
 
-            d = DateTime.now
-            date = d.strftime("%Y-%m-%d %H:%M:%S")
             userId = event['source']['userId'] 
+            date = Date.today
+            t = DateTime.now
+            time = t.strftime("%Y-%m-%d %H:%M:%S")
             user = SnsCredential.find_by(uid: userId)
-            user.safe = date
+            user.safe_date = date
+            user.safe_time = time
             user.save
 
           else
