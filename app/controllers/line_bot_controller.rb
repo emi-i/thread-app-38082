@@ -1,5 +1,6 @@
 class LineBotController < ApplicationController
   protect_from_forgery except: [:callback]
+  require "date"
 
   def callback
     body = request.body.read
@@ -18,6 +19,14 @@ class LineBotController < ApplicationController
               text: '確認いたしました'
             }
             client.reply_message(event['replyToken'], message)
+
+            d = DateTime.now
+            date = d.strftime("%Y-%m-%d %H:%M:%S")
+            userId = event['source']['userId'] 
+            user = SnsCredential.find_by(uid: userId)
+            user.safe = date
+            user.save
+
           else
             message = {
               type: 'flex',
