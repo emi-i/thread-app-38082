@@ -106,7 +106,7 @@ LINEメッセージに一定期間応答がないことを開発者が把握で�
 
 # データベース設計
 
-[![Image from Gyazo](https://i.gyazo.com/b689c50b93687de35968abbaa65aa225.png)](https://gyazo.com/b689c50b93687de35968abbaa65aa225)
+[![Image from Gyazo](https://i.gyazo.com/d9a6e8cea2b2357cd8480b62872b54f0.png)](https://gyazo.com/d9a6e8cea2b2357cd8480b62872b54f0)
 
 
 # 画面遷移図
